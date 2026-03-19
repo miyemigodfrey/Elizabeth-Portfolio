@@ -5,88 +5,101 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 const transition = { duration: 0.6, ease: [0.23, 1, 0.32, 1] as const };
 
 const projectsData: Record<
-  string,
-  {
-    title: string;
-    type: string;
-    summary: string;
-    description: string;
-    tags: string[];
-    features: string[];
-    liveUrl?: string;
-    githubUrl?: string;
-  }
+	string,
+	{
+		title: string;
+		type: string;
+		summary: string;
+		description: string;
+		tags: string[];
+		features: string[];
+		liveUrl?: string;
+		githubUrl?: string;
+	}
 > = {
-  "financial-analytics-dashboard": {
-    title: "Financial Analytics Dashboard",
-    type: "DASHBOARD",
-    summary:
-      "A real-time financial analytics dashboard with interactive charts, data filtering, and responsive design.",
-    description:
-      "The application uses a modular React component architecture with reusable UI components, state management, and API data fetching.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "REST APIs"],
-    features: [
-      "Dashboard analytics with real-time data",
-      "Data filtering and search",
-      "Interactive charts and visualisations",
-      "Responsive UI across devices",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  "social-media-analytics-platform": {
-    title: "Social Media Analytics Platform",
-    type: "PLATFORM",
-    summary:
-      "An analytics platform providing insights into social media performance with interactive dashboards.",
-    description:
-      "Built with Next.js for server-side rendering and optimised API routes, featuring a component-driven architecture.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "Chart Libraries"],
-    features: [
-      "Social media metrics dashboard",
-      "User authentication",
-      "Data visualisation and reporting",
-      "API integration with multiple platforms",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  "e-commerce-platform": {
-    title: "E-commerce Platform",
-    type: "FEATURED",
-    summary:
-      "A modern ecommerce frontend built with Next.js and TypeScript focusing on performance, UX and scalability.",
-    description:
-      "The application uses a modular React component architecture with reusable UI components, state management, and API data fetching.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "Stripe"],
-    features: [
-      "Product catalog with search and filters",
-      "User authentication and profiles",
-      "Shopping cart and checkout flow",
-      "API integration and payment processing",
-      "Responsive UI",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  "ai-content-generation-studio": {
-    title: "AI Content Generation Studio",
-    type: "AI APP",
-    summary:
-      "An intelligent content creation platform powered by AI that generates, refines, and optimises written content for various formats and audiences.",
-    description:
-      "Built with React and integrated with OpenAI's GPT API, the app features prompt engineering workflows, real-time content streaming, and a polished editor UI for reviewing and exporting AI-generated copy.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "OpenAI API", "Streaming", "Prompt Engineering"],
-    features: [
-      "AI-powered content generation with custom prompts",
-      "Real-time response streaming",
-      "Tone and format customisation",
-      "Content history and version management",
-      "Export to multiple formats",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+	"financial-analytics-dashboard": {
+		title: "Financial Analytics Dashboard",
+		type: "DASHBOARD",
+		summary:
+			"A real-time financial analytics dashboard with interactive charts, data filtering, and responsive design.",
+		description:
+			"The application uses a modular React component architecture with reusable UI components, state management, and API data fetching.",
+		tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "REST APIs"],
+		features: [
+			"Dashboard analytics with real-time data",
+			"Data filtering and search",
+			"Interactive charts and visualisations",
+			"Responsive UI across devices",
+		],
+		liveUrl: "https://dashboard-test-nine-chi.vercel.app/dashboard/overview",
+		githubUrl: "https://github.com/miyemigodfrey/dashboard-test",
+	},
+	"social-media-analytics-platform": {
+		title: "Social Media Analytics Platform",
+		type: "PLATFORM",
+		summary:
+			"An analytics platform providing insights into social media performance with interactive dashboards.",
+		description:
+			"Built with Next.js for server-side rendering and optimised API routes, featuring a component-driven architecture.",
+		tags: [
+			"Next.js",
+			"TypeScript",
+			"Tailwind CSS",
+			"REST APIs",
+			"Chart Libraries",
+		],
+		features: [
+			"Social media metrics dashboard",
+			"User authentication",
+			"Data visualisation and reporting",
+			"API integration with multiple platforms",
+		],
+		liveUrl: "#",
+		githubUrl: "#",
+	},
+	"e-commerce-platform": {
+		title: "E-commerce Platform",
+		type: "FEATURED",
+		summary:
+			"A modern ecommerce frontend built with Next.js and TypeScript focusing on performance, UX and scalability.",
+		description:
+			"The application uses a modular React component architecture with reusable UI components, state management, and API data fetching.",
+		tags: ["Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "Stripe"],
+		features: [
+			"Product catalog with search and filters",
+			"User authentication and profiles",
+			"Shopping cart and checkout flow",
+			"API integration and payment processing",
+			"Responsive UI",
+		],
+		liveUrl: "#",
+		githubUrl: "#",
+	},
+	"ai-content-generation-studio": {
+		title: "AI Content Generation Studio",
+		type: "AI APP",
+		summary:
+			"An intelligent content creation platform powered by AI that generates, refines, and optimises written content for various formats and audiences.",
+		description:
+			"Built with React and integrated with OpenAI's GPT API, the app features prompt engineering workflows, real-time content streaming, and a polished editor UI for reviewing and exporting AI-generated copy.",
+		tags: [
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"OpenAI API",
+			"Streaming",
+			"Prompt Engineering",
+		],
+		features: [
+			"AI-powered content generation with custom prompts",
+			"Real-time response streaming",
+			"Tone and format customisation",
+			"Content history and version management",
+			"Export to multiple formats",
+		],
+		liveUrl: "#",
+		githubUrl: "#",
+	},
 };
 
 const CaseStudy = () => {

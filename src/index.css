@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 12% 90%;
+    --foreground: 210 20% 12%;
+
+    --card: 80 10% 96%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 80 15% 94%;
+    --popover-foreground: 210 20% 12%;
+
+    --primary: 12 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 80 10% 90%;
+    --secondary-foreground: 210 20% 12%;
+
+    --muted: 80 8% 88%;
+    --muted-foreground: 210 10% 46%;
+
+    --accent: 200 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 80 10% 85%;
+    --input: 80 10% 85%;
+    --ring: 12 85% 65%;
+
+    --radius: 2rem;
+
+    --coral: 12 85% 65%;
+    --orange: 35 90% 60%;
+    --blue: 200 70% 60%;
+
+    --sidebar-background: 80 15% 94%;
+    --sidebar-foreground: 210 20% 12%;
+    --sidebar-primary: 12 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 80 10% 90%;
+    --sidebar-accent-foreground: 210 20% 12%;
+    --sidebar-border: 80 10% 85%;
+    --sidebar-ring: 12 85% 65%;
+
+    --shadow-stack: 0 0 0 1px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.02), 0 12px 24px rgba(0,0,0,.03);
+
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Geist Mono', monospace;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 60 10% 90%;
+
+    --card: 220 18% 11%;
+    --card-foreground: 60 10% 90%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 60 10% 90%;
+
+    --primary: 12 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 60 10% 90%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 200 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 12 85% 65%;
+
+    --coral: 12 85% 65%;
+    --orange: 35 90% 60%;
+    --blue: 200 70% 60%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 60 10% 90%;
+    --sidebar-primary: 12 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 60 10% 90%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 12 85% 65%;
+
+    --shadow-stack: 0 0 0 1px rgba(255,255,255,.03), 0 2px 4px rgba(0,0,0,.15), 0 12px 24px rgba(0,0,0,.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .grid-line {
+    @apply w-[0.5px] h-full;
+    background-color: hsl(var(--foreground) / 0.05);
+  }
+
+  .glass-surface {
+    @apply backdrop-blur-xl;
+    background: hsl(var(--background) / 0.4);
+    box-shadow: var(--shadow-stack);
+  }
+
+  .meta-text {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40;
+  }
+
+  .clip-reveal {
+    clip-path: inset(100% 0 0 0);
+    animation: clipReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes clipReveal {
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}

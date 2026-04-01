@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Dashbrd from "@/assets/Dashboard.png";
+import Ecommerce from "@/assets/Jewell.png";
 
 const transition = { duration: 0.6, ease: [0.23, 1, 0.32, 1] as const };
 
@@ -27,10 +28,11 @@ const projects = [
 ];
 
 const featured = {
-	title: "E-commerce Platform",
+	title: "YesEl — Luxury Jewelry E-Commerce Website",
+	image: Ecommerce,
 	description:
-		"A modern ecommerce frontend built with Next.js and TypeScript focusing on performance, UX and scalability.",
-	tags: ["Next.js", "TypeScript", "Tailwind"],
+		"A fully responsive luxury jewelry e-commerce platform built with React and Vite, featuring smooth animations, advanced filtering, wishlist functionality, cart management, and a premium gold-themed UI for an elevated shopping experience.",
+	tags: ["React", "Vite", "TailwindCSS", "AOS"],
 	type: "FEATURED",
 	slug: "e-commerce-platform",
 };
@@ -98,13 +100,16 @@ const FeaturedWork = () => (
 						whileHover={{ y: -8 }}
 						transition={{ ...transition, delay: 0.2 }}
 						viewport={{ once: true }}
-						className="glass-surface rounded-[32px] p-8 md:p-10 flex flex-col justify-between h-full min-h-[500px] cursor-pointer group">
+						className="glass-surface rounded-[32px] p-8 md:p-10 flex flex-col justify-between h-[70%] min-h-[500px] cursor-pointer group">
+						{/**
 						<div className="flex-1 flex items-center justify-center mb-8">
 							<div className="w-full h-64 rounded-[24px] bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10" />
 						</div>
+						*/}
+						<img src={featured.image} alt="" />
 						<div>
 							<p className="meta-text mb-2">{featured.type}</p>
-							<h3 className="font-display text-2xl md:text-3xl font-light text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+							<h3 className="font-display text-2xl lg:text-4xl md:text-3xl font-light text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
 								{featured.title}
 							</h3>
 							<p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-md">

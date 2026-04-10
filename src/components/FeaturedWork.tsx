@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Dashbrd from "@/assets/Dashboard.png";
 import Ecommerce from "@/assets/Jewell.png";
+import Techlead from "@/assets/Techlead.png";
 
 const transition = { duration: 0.6, ease: [0.23, 1, 0.32, 1] as const };
 
@@ -14,10 +15,19 @@ const projects = [
 		slug: "financial-analytics-dashboard",
 	},
 	{
-		title: "Social Media Analytics Platform",
-		tags: ["Next.js", "Dashboard"],
+		title: "Techlead-platform",
+		image: Techlead,
+		tags: [
+			"React",
+			"NestJS",
+			"TypeScript",
+			"Tailwind CSS",
+			"Vite",
+			"Framer Motion",
+			"Recharts",
+		],
 		type: "PLATFORM",
-		slug: "social-media-analytics-platform",
+		slug: "techlead-platform",
 	},
 	{
 		title: "AI Content Generation Studio",

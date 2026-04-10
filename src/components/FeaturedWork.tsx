@@ -30,10 +30,10 @@ const projects = [
 		slug: "techlead-platform",
 	},
 	{
-		title: "AI Content Generation Studio",
-		tags: ["React", "OpenAI", "TypeScript"],
-		type: "AI APP",
-		slug: "ai-content-generation-studio",
+		title: "Budgety (Coming Soon...)",
+		tags: ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+		type: "FINANCE APP",
+		slug: "budgety",
 	},
 ];
 

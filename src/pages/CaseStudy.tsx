@@ -86,7 +86,7 @@ const projectsData: Record<
 		liveUrl: "https://e-commerce-website-psi-three.vercel.app/",
 		githubUrl: "https://github.com/miyemigodfrey/E-commerce-Website",
 	},
-	"budgety": {
+	budgety: {
 		title: "Budgety",
 		type: "FINANCE APP",
 		summary:
